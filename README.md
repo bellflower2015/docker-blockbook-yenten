@@ -1,6 +1,6 @@
 # docker-blockbook-bellcoin
 
-Dockerfile to launch Blockbook for Bellcoin
+Blockbook Dockerfile for Bellcoin
 
 ## Usage (directly from Docker Hub)
 
