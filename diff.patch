@@ -1,0 +1,20 @@
+diff --git a/bchain/coins/blockchain.go b/bchain/coins/blockchain.go
+index 1fe7baae..1624bce1 100644
+--- a/bchain/coins/blockchain.go
++++ b/bchain/coins/blockchain.go
+@@ -51,6 +51,7 @@ import (
+ 	"github.com/trezor/blockbook/bchain/coins/vertcoin"
+ 	"github.com/trezor/blockbook/bchain/coins/viacoin"
+ 	"github.com/trezor/blockbook/bchain/coins/vipstarcoin"
++	"github.com/trezor/blockbook/bchain/coins/yenten"
+ 	"github.com/trezor/blockbook/bchain/coins/zec"
+ 	"github.com/trezor/blockbook/common"
+ )
+@@ -123,6 +124,7 @@ func init() {
+ 	BlockChainFactories["Omotenashicoin Testnet"] = omotenashicoin.NewOmotenashiCoinRPC
+ 	BlockChainFactories["BitZeny"] = bitzeny.NewBitZenyRPC
+ 	BlockChainFactories["Trezarcoin"] = trezarcoin.NewTrezarcoinRPC
++	BlockChainFactories["Yenten"] = yenten.NewYentenRPC
+ }
+ 
+ // GetCoinNameFromConfig gets coin name and coin shortcut from config file

@@ -1,6 +1,6 @@
-# docker-blockbook-bellcoin
+# docker-blockbook-yenten
 
-Blockbook Dockerfile for Bellcoin
+Blockbook Dockerfile for Yenten
 
 ## Usage (directly from Docker Hub)
 
@@ -9,14 +9,14 @@ docker run \
     --hostname blockbook \
     -it \
     -v "$(PWD)/db:/blockbook/db" \
-    -p 9152:9152 \
+    -p 9163:9163 \
     -e RPC_USER=user \
     -e RPC_PASS=pass \
     -e RPC_HOST=127.0.0.1 \
-    -e RPC_PORT=25252 \
-    -e MQ_PORT=38352 \
+    -e RPC_PORT= 9982\
+    -e MQ_PORT=38363 \
     -e TZ=Asia/Tokyo \
-    bellflower2015/blockbook-bellcoin
+    bellflower2015/blockbook-yenten
 ```
 
 Blockbook config directory is `/blockbook/config` and database directory is `/blockbook/db`.
@@ -32,9 +32,9 @@ If you want to change hostname displayed, you can set it by `--hostname`.
 Get source code and make docker image:
 
 ```
-git clone https://github.com/bellcoin-org/docker-blockbook-bellcoin.git
-cd docker-blockbook-bellcoin
-docker build -t blockbook-bellcoin .
+git clone https://github.com/bellflower2015/docker-blockbook-yenten.git
+cd docker-blockbook-yenten
+docker build -t blockbook-yenten .
 ```
 
 Docker images are based on Debian 9 (Stretch).
@@ -44,5 +44,5 @@ Docker images are based on Debian 9 (Stretch).
 Boot from the built image as described below:
 
 ```
-docker run [options] blockbook-bellcoin
+docker run [options] blockbook-yenten
 ```
